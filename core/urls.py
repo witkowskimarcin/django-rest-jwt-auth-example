@@ -25,4 +25,5 @@ urlpatterns = [
     path('api-token-auth/', obtain_jwt_token, name='api_token_auth'),
     path('api-token-refresh/', refresh_jwt_token, name='api_token_auth_refresh'),
     path('api-token-verify/', verify_jwt_token, name='api_token_auth_verify'),
+    path('users/register/', views.CreateUserView.as_view(), name="registration"),
 ]
